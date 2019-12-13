@@ -4,8 +4,8 @@
   "description": "Main page for home website",
   "main": "index.js",
   "scripts": {
-    "start": "$(npm bin)/webpack-dev-server --open --hot",
-    "build": "$(npm bin)/webpack --config webpack.config.prod.js",
+    "start": "$(npm bin)/webpack-dev-server --env development",
+    "build": "$(npm bin)/webpack --env production",
     "test": "mocha --require testSetup.js \"src/components/*.test.js\""
   },
   "author": "Adam Kijowski",
@@ -15,21 +15,25 @@
     "react-dom": "^16.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.1.2",
-    "@babel/core": "^7.1.2",
-    "@babel/preset-env": "^7.1.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "babel-loader": "^8.0.4",
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/register": "^7.7.4",
+    "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.6.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "dotenv-webpack": "^1.7.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "html-webpack-plugin": "^3.2.0",
-    "jsdom": "^13.0.0",
+    "jsdom": "^13.2.0",
     "mocha": "^5.2.0",
     "react-addons-test-utils": "^15.6.2",
-    "webpack": "^4.25.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack": "^4.41.2",
+    "webpack-chain": "^6.0.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   }
 }
